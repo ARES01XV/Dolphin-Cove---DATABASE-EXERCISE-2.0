@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background-color: red; */
+}
+
+/* ***************** ADMIN INDEX PAGE ***************** */
+/* main------------------------- */
+.main{
+    display: flex;
+}
+
+/* aside------------------------- */
+aside{
+    /* border: 1px solid red; */
+    width: 15%;
+    height: 100vh;
+    padding: 2%;
+    background: #636c78;
+    color: white;
+    position: sticky;
+    /* position: relative; */
+    top: 0;
+    overflow: hidden;
+}
+
+aside .logo{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+/* .admin_info{
+    background: url(https://cdn.discordapp.com/attachments/882362353507778613/983180376832892928/239-2390265_9-dots-question-9-dots-on-a-page-removebg-preview.png);
+    background-size: 35%;
+    background-position: right;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+} */
+.admin_info img{
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.admin_name{
+    /* border: 1px solid red; */
+    text-align: center;
+}
+
+.tables{
+    border-bottom: 1px solid white;
+}
+.fa-table-cells{
+    padding-right: 4%;
+}
+.table{
+    /* color: rgba(255, 255, 255, 0.5); */
+    padding: 6% 4%;
+}
+.table a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+.table a:hover{
+    /* text-decoration: 2px underline; */
+    border-bottom: 2px solid white;
+}
+
+aside > a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 6%;
+    text-align: center;
+    color: white;
+    background: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ***************** 3 MAIN ADMIN PAGES ***************** */
+/* content------------------------- */
+.content{
+    /* border: 1px solid red; */
+    width: 85%;
+    padding: 1%;
+}
+
+.content h1{
+    padding: 5%;
+    margin-top: 10%;
+    text-align: center;
+    line-height: 150%;
+}
+
+.content_head{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_head a{
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 1%;
+    font-weight: bold;
+}
+.content_head a:hover{
+    background: #006ada;
+}
+
+/* content table------------------------- */
+.content_table{
+    /* border: 1px solid yellow; */
+    width: 100%;
+}
+table, td{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-collapse: collapse;
+    padding: 0.2%;
+    text-align: center;
+}
+.content_table th{
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-collapse: collapse;
+}
+
+.content_table td a{
+    text-decoration: none;
+}
+.fa-pen-to-square{
+    color: #007bff;
+}
+.fa-trash-can{
+    color: red;
+}
+
+/* ***************** ADMIN SUB PAGES ***************** */
+/* add_form------------------------- */
+.add_form form{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    /* box-shadow: 5px 5px 11px -2px rgba(0, 0, 0, 0.75); */
+    box-shadow: 7px 7px 10px 3px rgba(0, 0, 0, 0.75);
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+}
+
+.add_form form input, .add_form form select{
+    outline: none;
+    caret-color: #007bff;
+    width: 100%;
+    padding: 2%;
+    letter-spacing: 2px;
+}
+
+.add_btn input{
+    border: none;
+    border-radius: 20px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.add_btn input:hover{
+    background: #006ada;
+    cursor: pointer;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- links-------------------------- -->
+    <link rel="stylesheet" href="\public\tour_company_styles.css">
+    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="content_head">
+                <a href="#">Log out</a>
+                <a href="tour_company/create-reservation">Create Reservation</a>
+            </div>
+                <br><br>
+            <div class="content_table">
+                <table>
+                    <h2 style="text-align: center;text-decoration: underline 1px;">Reservations Table</h2><br>
+                    <thead>
+                        <!-- <tr>
+                            <th colspan="10">RESERVATIONS TABLE</th>
+                        </tr> -->
+                        <tr>
+                            <th>ID</th>
+                            <th>Hotel</th>
+                            <th>Hotel Name</th>
+                            <th>First Name</th>
+                            <th>Last name</th>
+                            <th>Guests Number</th>
+                            <th>Program</th>
+                            <th>Payment Method</th>
+                            <th>Tour Company</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% Object.values(reservations).forEach((reservations)=> { %>
+                            <tr>
+                                <td>
+                                    <%= reservations.reservation_id %>
+                                </td>
+                                <td>
+                                    <%= reservations.hotel %>
+                                </td>
+                                <td>
+                                    <%= reservations.hotel_name %>
+                                </td>
+                                <td>
+                                    <%= reservations.frst_nm %>
+                                </td>
+                                <td>
+                                    <%= reservations.last_nm %>
+                                </td>
+                                <td>
+                                    <%= reservations.guests_numb %>
+                                </td>
+                                <td>
+                                    <%= reservations.program_name %>
+                                </td>
+                                <td>
+                                    <%= reservations.method_name %>
+                                </td>
+                                <td>
+                                    <%= reservations.comp_name %>
+                                </td>
+                                <td>
+                                    <a href="/tour_company/reservations/edit/<%= reservations.reservation_id %> ">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a href="/tour_company/reservations/delete/<%= reservations.reservation_id %>">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

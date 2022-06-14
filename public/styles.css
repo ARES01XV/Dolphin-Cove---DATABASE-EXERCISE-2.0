@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+}
+
+/* ***************** INDEX PAGE ***************** */
+/* header------------------------- */
+header{
+    /* border: 1px solid red; */
+    background-color: #39a4ac;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1%; */
+    height: 15vh;
+    overflow: hidden;
+    /* top: 0%; */
+    /* position: sticky; */
+}
+
+.logo img{
+    background-color: white;
+    padding: 15%;
+}
+
+nav{
+    /* border: 1px solid yellow; */
+    width: 80%;
+    /* height: 15vh; */
+}
+.b_right{
+    border-right: 2px solid #14838b;
+}
+nav a{
+    /* border: 1px solid red; */
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 2% 8%;
+}
+nav a:hover{
+    background: #4bd3dd;
+    transition: 0.5s ease-in-out;
+}
+
+.deals, .deals:hover{
+    color: #ffcb02;
+    background: #162e6c;
+}
+
+/* covid------------------------- */
+.covid{
+    background: #095f65;
+    color: white;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2%;
+}
+
+/* deal image------------------------- */
+.deal_img{
+    /* border: 1px solid red; */
+    width: 98.7vw;
+}
+
+.deal_img img{
+    width: 100%;
+}
+
+/* welcome & info------------------------- */
+.welcome{
+    /* border: 1px solid red; */
+    margin-top: -5px;
+    background: #24326a;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+.welcome h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.info{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 5% 0;
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+.info p{
+    font-size: 18.5px;
+    color: #797979;
+}
+
+/* programs------------------------- */
+.programs{
+    /* border: 1px solid red; */
+    padding: 3% 0;
+}
+
+.programs h1{
+    /* border: 1px solid red; */
+    border-bottom: 2px solid #ffcb02;
+    width: 60%;
+    padding: 0 2%;
+    color: #24326a;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    margin: auto;
+}
+
+.card{
+    /* border: 1px solid red; */
+    /* border-radius: 20px; */
+    background: #efeeee;
+    width: 90%;
+    height: 80vh;
+    margin: 4% auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left{
+    /* border: 1px solid red; */
+    width: 50%;
+    overflow: hidden;
+}
+.left img{
+    width: 100%;
+    /* height: 150%; */
+}
+
+.right{
+    /* border: 1px solid red; */
+    width: 50%;
+    /* overflow: hidden; */
+    padding: 4%;
+}
+
+.reserve a{
+    border: none;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 3%;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    background: #007bff;
+}
+.reserve a:hover{
+    background: #006ada;
+    cursor: pointer;
+}
+
+/* Reservation Form------------------------- */
+.reservation_form form{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background: #efeeee;
+    box-shadow: 8px 10px 13px -8px rgba(0, 0, 0, 0.75);
+    width: 70%;
+    margin: auto;
+    padding: 1% 6%;
+}
+
+.reservation_form form input, .reservation_form form select{
+    outline: none;
+    caret-color: #007bff;
+    width: 100%;
+    padding: 0.5%;
+    letter-spacing: 2px;
+}
+
+.book input{
+    border: none;
+    border-radius: 20px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    width: 50% !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.book input:hover{
+    background: #006ada;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* cards accepted------------------------- */
+.cards_accepted{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3%;
+    box-shadow: 8px 10px 13px -8px rgba(0, 0, 0, 0.75);
+}
+
+/* enjoy activities------------------------- */
+.enjoy_activities{
+    /* border: 1px solid red; */
+    background: #efeeee;
+    text-align: center;
+    padding: 3% 5%;
+}
+
+.enjoy_activities h2{
+    color: #333333;
+}
+
+.activities_wrap{
+    /* border: 1px solid red; */
+    width: 82%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.activities_wrap p{
+    padding: 1% 3%;
+    color: #666666;
+}
+
+/* footer------------------------- */
+.footer_container{
+    /* border: 1px solid red; */
+    background: #7bb968;
+    color: white;
+}
+
+footer{
+    display: flex;
+    background: #39a4ac;
+}
+
+.fleft{
+    /* border: 1px solid red; */
+    width: 50%;
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+}
+.fleft a{
+    /* border: 1px solid red; */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    padding: 1%;
+    color: white;
+}
+
+.fright{
+    /* border: 1px solid red; */
+    width: 50%;
+    padding: 2% 15%;
+}
+.fright > a{
+    color: white;
+}
+
+.footer_links{
+    padding: 0.5% 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_links > a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: white;
+}
+.admin_tour a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    color: #7bb968;
+    cursor: default;
+}
+
+/* ***************** ADMIN LOGIN ***************** */
+.login_content{
+    padding: 2% 1%;
+}
+
+.login_head a{
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 1%;
+    font-weight: bold;
+}
+.login_head a:hover{
+    background: #006ada;
+}
+
+.login_form form{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px 3px rgba(0, 0, 0, 0.75);
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.login_form form input{
+    outline: none;
+    caret-color: #007bff;
+    width: 100%;
+    padding: 2%;
+    letter-spacing: 2px;
+}
+
+.login_btn input{
+    border: none;
+    border-radius: 20px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.login_btn input:hover{
+    background: #006ada;
+    cursor: pointer;
+}

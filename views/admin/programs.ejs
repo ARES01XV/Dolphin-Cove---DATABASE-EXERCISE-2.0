@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- links-------------------------- -->
+    <link rel="stylesheet" href="\public\admin_styles.css">
+    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <aside>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://www.dolphincoveja.com/Content/src/dc-logo.png" alt="dolphin_cove_logo">
+                </a>
+            </div>
+            <br><br>
+            <!-- info imported from database -->
+            <div class="admin_info">
+                <img src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg" alt="admin_pic">
+
+                <div class="admin_name">
+                    <h3>
+                        James Doe
+                    </h3>
+                </div>
+            </div>
+            <br><br>
+            <p class="tables">
+                <i class="fa-solid fa-table-cells"></i>
+                Tables
+            </p>
+            <!-- <br> -->
+            <p class="table">
+                <a href="reservations">
+                    Reservations
+                </a>
+            </p>
+            <p class="table">
+                <a href="tour_companies">
+                    Tour Companies
+                </a>
+            </p>
+            <p class="table">
+                <a href="programs">
+                    Dolphin Cove Programs
+                </a>
+            </p>
+
+            <a href="#">Log out</a>
+        </aside>
+
+        <div class="content">
+            <div class="content_head">
+                <h2>Programs Table</h2>
+                <a href="/admin/create-program">Create Program</a>
+            </div>
+            <br>
+            <div class="content_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Program Name</th>
+                            <th>Description</th>
+                            <th>Price (per person)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% Object.values(programs).forEach((programs)=> { %>
+                            <tr>
+                                <td>
+                                    <%= programs.program_name %>
+                                </td>
+                                <td>
+                                    <%= programs.description %>
+                                </td>
+                                <td>
+                                    $<%= programs.price_per_person %>USD
+                                </td>
+                                <td>
+                                    <a href="/admin/programs/edit/<%= programs.program_id %> ">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <a href="/admin/programs/delete/<%= programs.program_id %> ">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

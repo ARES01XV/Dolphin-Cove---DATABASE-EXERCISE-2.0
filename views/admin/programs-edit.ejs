@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <!-- links-------------------------- -->
+    <link rel="stylesheet" href="\public\admin_styles.css">
+    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <aside>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://www.dolphincoveja.com/Content/src/dc-logo.png" alt="dolphin_cove_logo">
+                </a>
+            </div>
+            <br><br>
+            <div class="admin_info">
+                <img src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg" alt="admin_pic">
+
+                <div class="admin_name">
+                    <h3>
+                        James Doe
+                    </h3>
+                </div>
+            </div>
+            <br><br>
+            <p class="tables">
+                <i class="fa-solid fa-table-cells"></i>
+                Tables
+            </p>
+            <!-- <br> -->
+            <p class="table">
+                <a href="reservations">
+                    Reservations
+                </a>
+            </p>
+            <p class="table">
+                <a href="tour_companies">
+                    Tour Companies
+                </a>
+            </p>
+            <p class="table">
+                <a href="programs">
+                    Programs
+                </a>
+            </p>
+
+            <a href="#">Log out</a>
+        </aside>
+
+        <div class="content">
+            <div class="content_head">
+                <!-- <h2>Tour Companies Table</h2> -->
+                <a href="/admin/programs">
+                    <i class="fa-solid fa-angle-left"></i>
+                    Programs</a>
+            </div>
+            <br>
+            <div class="content_edit add_form">
+                <form action="" method="post">
+                    <h2>Edit Program</h2>
+                        <br>
+                    <div>
+                        <label for="program_pic">Picture URL</label>
+                        <input type="text" name="program_pic" id="program_pic" value="<%= programs.program_pic %> ">
+                    </div>
+                        <br>
+                    <div>
+                        <label for="program_name">Program Name</label>
+                        <input type="text" name="program_name" id="program_name" value="<%= programs.program_name %> ">
+                    </div>
+                        <br>
+                    <div>
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description" value="<%= programs.description %> ">
+                    </div>
+                        <br>
+                    <div>
+                        <label for="price_per_person">Price (per person)</label>
+                        <input type="number" name="price_per_person" id="price_per_person" value="<%= programs.price_per_person %> ">
+                    </div>
+                        <br>
+                    <div class="add_btn">
+                        <input type="submit" value="Update">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

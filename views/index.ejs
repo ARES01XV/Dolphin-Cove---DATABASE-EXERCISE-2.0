@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%=title%> </title>
+    <!-- links -->
+    <link rel="stylesheet" href="../public/styles.css">
+    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header--------------------------------- -->
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://cdn.discordapp.com/attachments/882362353507778613/982850294616576030/dolphin_cove_logo.png"
+                alt="dolphin_cove_logo">
+            </a>
+        </div>
+
+        <nav>
+            <a href="#" class="b_right">
+                PARKS
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <a href="#" class="b_right">
+                INFORMATION
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <a href="#">
+                NEWS
+            </a>
+            <a href="#" class="deals">
+                DEALS
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </nav>
+    </header>
+
+    <!-- covid--------------------------------- -->
+    <div class="covid">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>
+            Dolphin Cares: Integral Hygiene and safety protocols. Read more!
+        </p>
+    </div>
+
+    <!-- deal image--------------------------------- -->
+    <div class="deal_img">
+        <a href="#">
+            <img src="https://www.dtraveller.com/promotions/imagesDD/dolphincoveja-banner.jpg?v=1" alt="deal_img">
+        </a>
+    </div>
+    
+    <!-- welcome & info--------------------------------- -->
+    <div class="welcome">
+        <h1>Welcome to Dolphin Cove Jamaica</h1>
+        <h3><i>
+            Part of the Dolphin Discovery Group, the largest dolphin company in the world
+        </i></h3>
+    </div>
+    
+    <div class="info">
+        <p>
+            Did you know that <b>swimming with dolphins</b> is considered one of the <b>top 10 bucket list</b> items? When you come to <b>Dolphin Cove Jamaica</b> you not only get a chance to live this dream; you have the opportunity to knock off a few more, like ride a camel and
+            interact with stingrays. Here a place where you come for the day but remember for a lifetime.
+        </p>
+            <br>
+        <p>
+            One of the many things that make <b>Dolphin Cove Jamaica</b> special is that you can live the experience of <b>swimming with dolphins</b> in the natural Caribbean Sea. Here you have the opportunity to enjoy the company of different fish, rays, and other
+            forms of natural sea life. <b>Dolphin Cove Jamaica</b> is the place to spend the day enjoying lots of fun activities. There is truly something for everyone!
+        </p>
+            <br>
+        <p>
+            <b>Dolphin Cove Jamaica</b> is full of <b>natural wonders and beauty</b> you gotta see for yourself! In <b>Dolphin Cove Ocho Rios</b> you’ll enjoy strolling around in the Jungle Trail, where you will notice many different wild animals, plants, and trees.
+            At <b>Dolphin Cove Jamaica</b> we respect the environment of all the species, here you will live the most natural experience you’ve ever had.
+        </p>
+    </div>
+
+    <!-- programs--------------------------------- -->
+    <div class="programs">
+        <h1>DISCOVER THE PROGRAMS WE OFFER</h1>
+            <br>
+        
+        <!-- Program Cards--------------------------------- -->
+        <div class="card_container">
+            <% Object.values(programs).forEach((programs) => { %> 
+            <div class="card">
+                <div class="left">
+                    <img src="<%= programs.program_pic %> "
+                        alt="">
+                </div>
+            
+                <div class="right">
+                    <div class="program_name">
+                        <h2>
+                            <%= programs.program_name %> 
+                        </h2>
+                    </div>
+                    <br><br>
+                    <div class="program_description">
+                        <p>
+                            <%= programs.description %> 
+                        </p>
+                    </div>
+                    <br><br>
+                    <div class="program_price" style="border-bottom: 1px solid red">
+                        <p><b>
+                            $<%= programs.price_per_person %> USD per person
+                        </b></p>
+                    </div>
+                    <br><br>
+                    <div class="reserve">
+                        <a href="#reservation_form">Reserve</a>
+                    </div>
+                </div>
+            </div>
+            <% }) %> 
+        </div>
+
+        <!-- Reservation Form--------------------------------- -->
+        <div class="reservation_form" id="reservation_form">
+            <form action="" method="post">
+                <h1>Make a Reservation Today</h1>
+                    <br><br>
+                <div>
+                    <label for="hotel">Hotel Leaving From</label><br>
+                    <select name="hotel" id="hotel">
+                        <option value=""></option>
+                    </select>
+                </div>
+                    <br>
+                <div>
+                    <label for="tour_comp">Choose a Tour Company</label><br>
+                    <select name="tour_comp" id="tour_comp">
+                        <option value=""></option>
+                    </select>
+                </div>
+                    <br>
+                <div>
+                    <label for="frst_nm">First name</label><br>
+                    <input type="text" name="frst_nm" id="frst_nm">
+                </div>
+                    <br>
+                <div>
+                    <label for="last_nm">Last name</label><br>
+                    <input type="text" name="last_nm" id="last_nm">
+                </div>
+                    <br>
+                <div>
+                    <label for="guests_numb">Number of Guests</label><br>
+                    <input type="number" name="guests_numb" id="guests_numb">
+                </div>
+                    <br>
+                <div>
+                    <label for="activity">Choose an activity</label><br>
+                    <select name="activity" id="activity">
+                        <option value=""></option>
+                    </select>
+                </div>
+                    <br>
+                <div>
+                    <label for="date">Date</label><br>
+                    <input type="date" name="date" id="date">
+                </div>
+                    <br>
+                <div>
+                    <label for="days">Number of Days</label><br>
+                    <input type="number" name="days" id="days" min="1" max="5">
+                </div>
+                    <br>
+                <div>
+                    <label for="payment_method">Choose a Payment Method</label><br>
+                    <select name="payment_method" id="payment_method">
+                        <option value=""></option>
+                    </select>
+                </div>
+                    <br><br>
+                <div class="book">
+                    <input type="submit" value="Book">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="cards_accepted">
+        <img src="https://www.dolphincoveja.com/Content/src/cards.png" alt="">
+    </div>
+
+    <div class="enjoy_activities">
+        <h2>
+            Dolphin Cove Jamaica is the place to spend the day enjoying lots of fun activities here there is something for everyone.
+            The entrance fee includes full use of the following activities:
+        </h2>
+            <br><br>
+        <div class="activities_wrap">
+            <p>Swimming with sharks and stingrays</p>
+            <p>Pet the camels</p>
+            <p>Watch our hilarious Jamaica Shark Show</p>
+            <p>Relax on our glistening white sandy beaches</p>
+            <p>Interact with exotic birds, snakes and iguanas on the Jungle Trail walk</p>
+        </div>
+            <br><br>
+        <h2><i>Activities vary according to each park</i></h2>
+    </div>
+
+    <div class="footer_container">
+        <footer>
+            <div class="fleft">
+                <a href="#">Information</a>
+                <a href="#">News</a>
+                <a href="#">About Us</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms and Conditions</a>
+            </div>
+            <div class="fright">
+                <p>CONTACT US</p>
+                <br>
+                <h2>1-877-344-3385</h2>
+                <br><br>
+                <p><b>Canada</b> 1-866-793-1905</p>
+                <p><b>United Kingdom</b> 0-800-680-0420</p>
+                <p><b>Mexico</b> 01-800-727-5391</p>
+                <p><b>Dominican Republic</b> 1-888-751-9005</p>
+                <p><b>United States</b> 1-866-393-5158</p>
+        
+                <a href="#">Contact Us</a>
+                <p>PARTNERS:</p>
+                <br>
+                <div class="phins">
+                    <a href="#">
+                        <img src="https://www.dolphincoveja.com/Content/src/dd-logo.png" alt="discovery">
+                    </a>
+                    <a href="#">
+                        <img src="https://www.dolphincoveja.com/Content/src/dc-logo.png" alt="cove">
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer_links">
+            <div class="admin_tour">
+                <a href="/company_login">to</a>
+            </div>
+            <a href="/">www.dolphincoveja.com</a>
+            <div class="admin_tour">
+                <a href="/admin_login">ad</a>
+            </div>
+        </div.>
+    </div>
+</body>
+</html>

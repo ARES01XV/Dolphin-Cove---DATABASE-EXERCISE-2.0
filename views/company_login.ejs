@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= tittle %></title>
+    <!-- links -->
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div class="login_content">
+        <div class="login_head">
+            <a href="/">
+                <i class="fa-solid fa-angle-left"></i>
+                Home
+            </a>
+        </div>
+        <br>
+        <div class="login_form">
+            <form action="admin/login" method="post">
+                <h2>
+                    Company Login
+                </h2>
+                <br>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Company Email">
+                </div>
+                <br>
+                <div class="add_btn">
+                    <input type="password" name="password" id="password" placeholder="Company Password">
+                </div>
+                <br>
+                <div class="login_btn">
+                    <input type="submit" value="Log in">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
