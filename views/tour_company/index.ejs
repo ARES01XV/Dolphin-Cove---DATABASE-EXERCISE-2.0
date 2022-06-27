@@ -13,7 +13,7 @@
     <div class="main">
         <div class="content">
             <div class="content_head">
-                <a href="#">Log out</a>
+                <a href="tour_company/tp_logout">Log out</a>
                 <a href="tour_company/create-reservation">Create Reservation</a>
             </div>
                 <br><br>
@@ -26,14 +26,12 @@
                         </tr> -->
                         <tr>
                             <th>ID</th>
-                            <th>Hotel</th>
                             <th>Hotel Name</th>
                             <th>First Name</th>
                             <th>Last name</th>
                             <th>Guests Number</th>
                             <th>Program</th>
                             <th>Payment Method</th>
-                            <th>Tour Company</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -42,9 +40,6 @@
                             <tr>
                                 <td>
                                     <%= reservations.reservation_id %>
-                                </td>
-                                <td>
-                                    <%= reservations.hotel %>
                                 </td>
                                 <td>
                                     <%= reservations.hotel_name %>
@@ -65,13 +60,10 @@
                                     <%= reservations.method_name %>
                                 </td>
                                 <td>
-                                    <%= reservations.comp_name %>
-                                </td>
-                                <td>
-                                    <a href="/tour_company/reservations/edit/<%= reservations.reservation_id %> ">
+                                    <a href="/tour_company/index/edit/<%= reservations.reservation_id %> ">
                                         <i class="fa-solid fa-pen-to-square"></i>
                                     </a>
-                                    <a href="/tour_company/reservations/delete/<%= reservations.reservation_id %>">
+                                    <a href="/tour_company/delete/<%= reservations.reservation_id %>">
                                         <i class="fa-regular fa-trash-can"></i>
                                     </a>
                                 </td>

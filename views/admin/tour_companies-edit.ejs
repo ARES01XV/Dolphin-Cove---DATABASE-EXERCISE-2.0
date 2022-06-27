@@ -1,91 +1,101 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title> <%= title %> </title>
+		<!-- links-------------------------- -->
+		<link rel="stylesheet" href="\public\admin_styles.css" />
+		<script
+			src="https://kit.fontawesome.com/b7a2ac83f3.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <!-- links-------------------------- -->
-    <link rel="stylesheet" href="\public\admin_styles.css">
-    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
-</head>
+	<body>
+		<div class="main">
+			<aside>
+				<div class="logo">
+					<a href="/">
+						<img
+							src="https://www.dolphincoveja.com/Content/src/dc-logo.png"
+							alt="dolphin_cove_logo"
+						/>
+					</a>
+				</div>
+				<br /><br />
+				<!-- info imported from database -->
+				<div class="admin_info">
+					<img
+						src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg"
+						alt="admin_pic"
+					/>
 
-<body>
-    <div class="main">
-        <aside>
-            <div class="logo">
-                <a href="/">
-                    <img src="https://www.dolphincoveja.com/Content/src/dc-logo.png" alt="dolphin_cove_logo">
-                </a>
-            </div>
-            <br><br>
-            <!-- info imported from database -->
-            <div class="admin_info">
-                <img src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg" alt="admin_pic">
+					<div class="admin_name">
+						<h3> Admin </h3>
+					</div>
+				</div>
+				<br /><br />
+				<p class="tables">
+					<i class="fa-solid fa-table-cells"></i>
+					Tables
+				</p>
+				<!-- <br> -->
+				<p class="table">
+					<a href="reservations"> Reservations </a>
+				</p>
+				<p class="table">
+					<a href="tour_companies"> Tour Companies </a>
+				</p>
+				<p class="table">
+					<a href="programs"> Programs </a>
+				</p>
 
-                <div class="admin_name">
-                    <h3>
-                        James Doe
-                    </h3>
-                </div>
-            </div>
-            <br><br>
-            <p class="tables">
-                <i class="fa-solid fa-table-cells"></i>
-                Tables
-            </p>
-            <!-- <br> -->
-            <p class="table">
-                <a href="reservations">
-                    Reservations
-                </a>
-            </p>
-            <p class="table">
-                <a href="tour_companies">
-                    Tour Companies
-                </a>
-            </p>
-            <p class="table">
-                <a href="programs">
-                    Programs
-                </a>
-            </p>
+				<a href="admin/admin_logout">Log out</a>
+			</aside>
 
-            <a href="#">Log out</a>
-        </aside>
-
-        <div class="content">
-            <div class="content_head">
-                <!-- <h2>Tour Companies Table</h2> -->
-                <a href="/admin/tour_companies">
-                    <i class="fa-solid fa-angle-left"></i>
-                    Tour Comp.</a>
-            </div>
-            <br>
-            <div class="content_edit add_form">
-                <form action="/admin/update-tour_comp" method="post">
-                    <h2>Edit Tour Company</h2>
-                        <br>
-                    <div>
-                        <label for="comp_name">Company Name</label>
-                        <input type="text" name="comp_name" id="comp_name" value="<%= tour_companies.comp_name %> ">
-                    </div>
-                        <br>
-                    <div>
-                        <label for="description">Company Description</label>
-                        <input type="text" name="description" id="description" value="<%= tour_companies.description %> ">
-                    </div>
-                        <br>
-                    <div class="add_btn">
-                        <input type="submit" value="Update">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-
+			<div class="content">
+				<div class="content_head">
+					<!-- <h2>Tour Companies Table</h2> -->
+					<a href="/admin/tour_companies">
+						<i class="fa-solid fa-angle-left"></i>
+						Tour Comp.</a
+					>
+				</div>
+				<br />
+				<div class="content_edit add_form">
+					<form action="/admin/update" method="post">
+						<h2>Edit Tour Company</h2>
+						<br />
+						<div>
+							<label for="comp_name">Company Name</label>
+							<input
+								type="text"
+								name="comp_name"
+								id="comp_name"
+								value="<%= tour_comps.comp_name %> "
+							/>
+						</div>
+						<br />
+						<div>
+							<label for="description">Company Description</label>
+							<input
+								type="text"
+								name="description"
+								id="description"
+								value="<%= tour_comps.description %> "
+							/>
+						</div>
+						<br />
+						<div class="add_btn">
+							<input type="submit" value="Update" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

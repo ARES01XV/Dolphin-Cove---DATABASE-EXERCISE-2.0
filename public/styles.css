@@ -200,6 +200,7 @@ nav a:hover{
     font-weight: bold;
     font-size: 20px;
     width: 50% !important;
+    padding: 2% 0 !important;
     margin-left: 50%;
     transform: translateX(-50%);
 }

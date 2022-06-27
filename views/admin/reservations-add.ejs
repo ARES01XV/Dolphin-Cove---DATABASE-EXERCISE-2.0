@@ -1,144 +1,188 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title> <%= title %> </title>
+		<!-- links-------------------------- -->
+		<link rel="stylesheet" href="\public\admin_styles.css" />
+		<script
+			src="https://kit.fontawesome.com/b7a2ac83f3.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <%= title %>
-    </title>
-    <!-- links-------------------------- -->
-    <link rel="stylesheet" href="\public\admin_styles.css">
-    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
-</head>
+	<body>
+		<div class="main">
+			<aside>
+				<div class="logo">
+					<a href="/">
+						<img
+							src="https://www.dolphincoveja.com/Content/src/dc-logo.png"
+							alt="dolphin_cove_logo"
+						/>
+					</a>
+				</div>
+				<br /><br />
+				<!-- info imported from database -->
+				<div class="admin_info">
+					<img
+						src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg"
+						alt="admin_pic"
+					/>
 
-<body>
-    <div class="main">
-        <aside>
-            <div class="logo">
-                <a href="/">
-                    <img src="https://www.dolphincoveja.com/Content/src/dc-logo.png" alt="dolphin_cove_logo">
-                </a>
-            </div>
-            <br><br>
-            <!-- info imported from database -->
-            <div class="admin_info">
-                <img src="https://i.pinimg.com/originals/d0/53/f2/d053f2394d420d8d3712046f4e8f80cc.jpg" alt="admin_pic">
+					<div class="admin_name">
+						<h3> Admin </h3>
+					</div>
+				</div>
+				<br /><br />
+				<p class="tables">
+					<i class="fa-solid fa-table-cells"></i>
+					Tables
+				</p>
+				<!-- <br> -->
+				<p class="table">
+					<a href="reservations"> Reservations </a>
+				</p>
+				<p class="table">
+					<a href="tour_companies"> Tour Companies </a>
+				</p>
+				<p class="table">
+					<a href="programs"> Programs </a>
+				</p>
 
-                <div class="admin_name">
-                    <h3>
-                        James Doe
-                    </h3>
-                </div>
-            </div>
-            <br><br>
-            <p class="tables">
-                <i class="fa-solid fa-table-cells"></i>
-                Tables
-            </p>
-            <!-- <br> -->
-            <p class="table">
-                <a href="reservations">
-                    Reservations
-                </a>
-            </p>
-            <p class="table">
-                <a href="tour_companies">
-                    Tour Companies
-                </a>
-            </p>
-            <p class="table">
-                <a href="programs">
-                    Programs
-                </a>
-            </p>
+				<a href="admin/admin_logout">Log out</a>
+			</aside>
 
-            <a href="#">Log out</a>
-        </aside>
+			<!-- --------------------------------------------------------- -->
 
-        <div class="content">
-            <div class="content_head">
-                <!-- <h2>Tour Companies Table</h2> -->
-                <a href="reservations">
-                    <i class="fa-solid fa-angle-left"></i>
-                    Reservations
-                </a>
-            </div>
-            <br>
-            <div class="add_form">
-                <form action="/admin/add-tour_comp" method="post">
-                    <h2>
-                        Create a Reservation
-                    </h2>
-                    <br>
-                    <div>
+			<div class="content">
+				<div class="content_head">
+					<!-- <h2>Tour Companies Table</h2> -->
+					<a href="reservations">
+						<i class="fa-solid fa-angle-left"></i>
+						Reservations
+					</a>
+				</div>
+				<br />
+				<div class="add_form">
+					<form action="/admin/addres" method="post">
+						<h2> Create a Reservation </h2>
+						<br />
+						<!-- <div>
                         <input type="number" name="hotel" value="" placeholder="Hotel or Walk-in">
-                    </div>
-                    <br>
-                    <div>
-                        <!-- <input type="text" name="hotel_name" value="" placeholder="Hotel Name"> -->
-                        <select name="hotel_name" id="hotel_name">
-                            <option value="Hotel Name">Hotel Name</option>
-                            <option value="">
+                    </div> -->
+						<br />
+						<div>
+							<!-- <input type="text" name="hotel_name" value="" placeholder="Hotel Name"> -->
+							<select name="hotel_name" id="hotel_name">
+								<!-- <option value="" hidden> Hotel Name </option>
+                            <option value="1"> Hotel Riu Ochio Rios </option>
+                            <option value="2"> Bahia Principe Grand Jamaica </option>
+                            <option value="3"> Grand Palladium Jamaica Resort & Spa </option>
+                            <option value="4"> Royalton White Sands Resort </option>
+                            <option value="5"> Jewel Runaway Bay Beach Resort & Waterpark </option>
+                            <option value="6"> Lashings Boutique Hotel & Villas </option>
+                            <option value="7"> Tropics View Jamaica </option>
+                            <option value="8"> Moon Palace </option> -->
 
-                            </option>
-                        </select>
-                    </div>
-                    <br>
-                    <div>
-                        <input type="text" name="frst_nm" value="" placeholder="First Name">
-                    </div>
-                    <br>
-                    <div>
-                        <input type="text" name="last_nm" value="" placeholder="Last Name">
-                    </div>
-                    <br>
-                    <div>
-                        <input type="number" name="guests_numb" value="" placeholder="# of Guests">
-                    </div>
-                    <br>
-                    <div>
-                        <!-- <input type="text" name="program_name" value="" placeholder="Program"> -->
-                        <select name="program_name" id="program_name">
-                            <option value="Program Name">Program Name</option>
-                            <option value="">
+								<% for( let i=0; i < create_reservation.length; i++ ) { %>
+								<option value="<%= create_reservation[i].hotel_id %>">
+									<%= create_reservation[i].hotel_name %>
+								</option>
+								<% } %>
+							</select>
+						</div>
+						<br />
+						<div>
+							<input
+								type="text"
+								name="frst_nm"
+								value=""
+								placeholder="First Name"
+							/>
+						</div>
+						<br />
+						<div>
+							<input
+								type="text"
+								name="last_nm"
+								value=""
+								placeholder="Last Name"
+							/>
+						</div>
+						<br />
+						<div>
+							<input
+								type="number"
+								name="guests_numb"
+								value=""
+								placeholder="# of Guests"
+								min="1"
+								max="50"
+							/>
+						</div>
+						<br />
+						<div>
+							<!-- <input type="text" name="program_name" value="" placeholder="Program"> -->
+							<select name="program_name" id="program_name">
+								<!-- <option value="" hidden> Program </option>
+                            <option value="1"> Dolphin Royal Swim </option>
+                            <option value="2"> Dolphin Swim Adventure </option>
+                            <option value="4"> Encounter With a Dolphin </option>
+                            <option value="5"> Shark Encounter </option> -->
 
-                            </option>
-                        </select>
-                    </div>
-                    <br>
-                    <div>
-                        <!-- <input type="text" name="method_name" value="" placeholder="Payment Method"> -->
-                        <select name="method_name" id="method_name">
-                            <option value="Payment Method">Payment Method</option>
-                            <option value="">
-                        
-                            </option>
-                        </select>
-                    </div>
-                    <br>
-                    <div>
-                        <!-- <input type="text" name="comp_name" value="" placeholder="Tour Company"> -->
-                        <select name="comp_name" id="comp_name">
-                            <option value="Tour Company">Tour Company</option>
-                            <option value="">
-                        
-                            </option>
-                        </select>
-                    </div>
-                    <br>
-                    <div>
-                        
-                    </div>
-                    <br>
-                    <div class="add_btn">
-                        <input type="submit" value="Add">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
+								<% for( let i=0; i < create_reservation.length; i++ ) { %>
+								<option value="<%= create_reservation[i].program_id %>">
+									<%= create_reservation[i].program_name %>
+								</option>
+								<% } %>
+							</select>
+						</div>
+						<br />
+						<div>
+							<!-- <input type="text" name="method_name" value="" placeholder="Payment Method"> -->
+							<select name="method_name" id="method_name">
+								<!-- <option value="" hidden> Payment Method </option>
+                            <option value="1"> Cash </option>
+                            <option value="2"> Card </option>
+                            <option value="3"> Credit </option> -->
 
+								<% for( let i=0; i < create_reservation.length; i++ ) { %>
+								<option value="<%= create_reservation[i].method_id %>">
+									<%= create_reservation[i].method_name %>
+								</option>
+								<% } %>
+							</select>
+						</div>
+						<br />
+						<div>
+							<!-- <input type="text" name="comp_name" value="" placeholder="Tour Company"> -->
+							<select name="comp_name" id="comp_name">
+								<!-- <option value="" hidden>Tour Company</option>
+                            <option value="1"> Byron's Jamaica Tours </option>
+                            <option value="2"> Know Jamaica Tours </option>
+                            <option value="3"> Jaital Tours </option> -->
+
+								<% for( let i=0; i < create_reservation.length; i++ ) { %>
+								<option value="<%= create_reservation[i].comp_id %>">
+									<%= create_reservation[i].comp_name %>
+								</option>
+								<% } %>
+							</select>
+						</div>
+						<br />
+						<div> </div>
+						<br />
+						<div class="add_btn">
+							<input type="submit" value="Add" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

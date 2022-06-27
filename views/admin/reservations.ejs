@@ -28,7 +28,7 @@
 
                 <div class="admin_name">
                     <h3>
-                        James Doe
+                        Admin
                     </h3>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 </a>
             </p>
 
-            <a href="#">Log out</a>
+            <a href="admin/admin_logout">Log out</a>
         </aside>
 
         <div class="content">
@@ -68,7 +68,6 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Hotel</th>
                             <th>Hotel Name</th>
                             <th>First Name</th>
                             <th>Last name</th>
@@ -82,8 +81,7 @@
                     <tbody>
                         <% Object.values(reservations).forEach((reservations) => { %>
                         <tr>
-                            <td> <%= reservations.reservation_id %> </td>
-                            <td><%= reservations.hotel %> </td>
+                            <td><%= reservations.reservation_id %> </td>
                             <td><%= reservations.hotel_name %> </td>
                             <td><%= reservations.frst_nm %> </td>
                             <td><%= reservations.last_nm %> </td>

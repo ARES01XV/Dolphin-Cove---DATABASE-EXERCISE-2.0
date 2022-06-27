@@ -1,58 +1,98 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- links-------------------------- -->
-    <link rel="stylesheet" href="\public\tour_company_styles.css">
-    <script src="https://kit.fontawesome.com/b7a2ac83f3.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="content">
-        <div class="content_head">
-            <a href="/tour_company">
-                <i class="fa-solid fa-angle-left"></i>
-                Reservations
-            </a>
-        </div>
-            <br><br>
-        <div class="add_form">
-            <form action="" method="post">
-                <h2>
-                    Create a Reservation
-                </h2>
-                    <br>
-                <div>
-                    <input type="text" name="hotel_name" value="" placeholder="Hotel Name">
-                </div>
-                <br>
-                <div>
-                    <input type="text" name="frst_nm" value="" placeholder="First Name">
-                </div>
-                <br>
-                <div>
-                    <input type="text" name="last_nm" value="" placeholder="Last Name">
-                </div>
-                <br>
-                <div>
-                    <input type="number" name="guests_numb" value="" placeholder="# of Guests">
-                </div>
-                <br>
-                <div>
-                    <input type="text" name="program_name" value="" placeholder="Program">
-                </div>
-                <br>
-                <div>
-                    <input type="text" name="method_name" value="" placeholder="Payment Method">
-                </div>
-                <br>
-                <div class="add_btn">
-                    <input type="submit" value="Add">
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- links-------------------------- -->
+		<link rel="stylesheet" href="\public\tour_company_styles.css" />
+		<script
+			src="https://kit.fontawesome.com/b7a2ac83f3.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="content_head">
+				<a href="/tour_company">
+					<i class="fa-solid fa-angle-left"></i>
+					Reservations
+				</a>
+			</div>
+			<br /><br />
+			<div class="add_form">
+				<form action="/tour_company/addres_tc" method="post">
+					<h2> Create a Reservation </h2>
+					<br />
+					<div>
+						<!-- <input type="text" name="hotel_name" value="" placeholder="Hotel Name"> -->
+						<select name="hotel_name" id="hotel_name">
+							<% for( let i=0; i < res_info.length; i++ ) { %>
+							<option value="<%= res_info[i].hotel_id %>">
+								<%= res_info[i].hotel_name %>
+							</option>
+							<% } %>
+						</select>
+					</div>
+					<br />
+					<div>
+						<input
+							type="text"
+							name="frst_nm"
+							value=""
+							placeholder="First Name"
+						/>
+					</div>
+					<br />
+					<div>
+						<input
+							type="text"
+							name="last_nm"
+							value=""
+							placeholder="Last Name"
+						/>
+					</div>
+					<br />
+					<div>
+						<input
+							type="number"
+							name="guests_numb"
+							value=""
+							placeholder="# of Guests"
+						/>
+					</div>
+					<br />
+					<div>
+						<!-- <input type="text" name="program_name" value="" placeholder="Program"> -->
+						<select name="program_name" id="program_name">
+							<!-- <option value="" hidden> Program </option> -->
+							<% for( let i=0; i < res_info.length; i++ ) { %>
+							<option value="<%= res_info[i].program_id %>">
+								<%= res_info[i].program_name %>
+							</option>
+							<% } %>
+						</select>
+					</div>
+					<br />
+					<div>
+						<!-- <input type="text" name="method_name" value="" placeholder="Payment Method"> -->
+						<select name="method_name" id="method_name">
+                            <% for( let i=0; i < res_info.length; i++ ) { %>
+							<option value="<%= res_info[i].method_id %>">
+								<%= res_info[i].method_name %>
+							</option>
+							<% } %>
+						</select>
+					</div>
+					<br />
+					<div class="add_btn">
+						<input type="submit" value="Add" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
 </html>

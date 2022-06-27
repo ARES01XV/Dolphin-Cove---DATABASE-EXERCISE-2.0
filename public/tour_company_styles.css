@@ -73,7 +73,7 @@ table, td{
     padding: 2%;
 }
 
-.add_form form input{
+.add_form form input, .add_form form select{
     outline: none;
     caret-color: #007bff;
     width: 100%;

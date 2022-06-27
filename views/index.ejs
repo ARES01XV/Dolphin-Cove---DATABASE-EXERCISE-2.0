@@ -122,20 +122,29 @@
 
         <!-- Reservation Form--------------------------------- -->
         <div class="reservation_form" id="reservation_form">
-            <form action="" method="post">
+            <form action="/index/addres" method="post">
                 <h1>Make a Reservation Today</h1>
                     <br><br>
-                <div>
-                    <label for="hotel">Hotel Leaving From</label><br>
-                    <select name="hotel" id="hotel">
-                        <option value=""></option>
+                    <div>
+                        <label for="hotel_name">Hotel Leaving From</label><br>
+                    <select name="hotel_name" id="hotel_name">
+                        <option value="1"> Hotel Riu Ochio Rios </option>
+                        <option value="2"> Bahia Principe Grand Jamaica </option>
+                        <option value="3"> Grand Palladium Jamaica Resort & Spa </option>
+                        <option value="4"> Royalton White Sands Resort </option>
+                        <option value="5"> Jewel Runaway Bay Beach Resort & Waterpark </option>
+                        <option value="6"> Lashings Boutique Hotel & Villas </option>
+                        <option value="7"> Tropics View Jamaica </option>
+                        <option value="8"> Moon Palace </option>
                     </select>
                 </div>
                     <br>
                 <div>
-                    <label for="tour_comp">Choose a Tour Company</label><br>
-                    <select name="tour_comp" id="tour_comp">
-                        <option value=""></option>
+                    <label for="comp_name">Choose a Tour Company</label><br>
+                    <select name="comp_name" id="comp_name">
+                        <option value="1"> Byron's Jamaica Tours </option>
+                        <option value="2"> Know Jamaica Tours </option>
+                        <option value="3"> Jaital Tours </option>
                     </select>
                 </div>
                     <br>
@@ -151,13 +160,16 @@
                     <br>
                 <div>
                     <label for="guests_numb">Number of Guests</label><br>
-                    <input type="number" name="guests_numb" id="guests_numb">
+                    <input type="number" name="guests_numb" id="guests_numb" min="1" max="50">
                 </div>
                     <br>
                 <div>
-                    <label for="activity">Choose an activity</label><br>
-                    <select name="activity" id="activity">
-                        <option value=""></option>
+                    <label for="program_name">Choose an Program</label><br>
+                    <select name="program_name" id="program_name">
+                        <option value="1"> Dolphin Royal Swim </option>
+                        <option value="2"> Dolphin Swim Adventure </option>
+                        <option value="4"> Encounter With a Dolphin </option>
+                        <option value="5"> Shark Encounter </option>
                     </select>
                 </div>
                     <br>
@@ -165,36 +177,40 @@
                     <label for="date">Date</label><br>
                     <input type="date" name="date" id="date">
                 </div>
-                    <br>
+                <br>
                 <div>
                     <label for="days">Number of Days</label><br>
                     <input type="number" name="days" id="days" min="1" max="5">
                 </div>
                     <br>
                 <div>
-                    <label for="payment_method">Choose a Payment Method</label><br>
-                    <select name="payment_method" id="payment_method">
-                        <option value=""></option>
+                    <label for="method_name">Choose a Payment Method</label><br>
+                    <select name="method_name" id="method_name">
+                        <option value="1"> Cash </option>
+                        <option value="2"> Card </option>
+                        <option value="3"> Credit </option>
                     </select>
                 </div>
-                    <br><br>
+                <br><br>
                 <div class="book">
-                    <input type="submit" value="Book">
+                    <input type="submit" value="Book Reservation">
                 </div>
             </form>
         </div>
     </div>
     
+    <!-- Cards Accepted--------------------------------- -->
     <div class="cards_accepted">
         <img src="https://www.dolphincoveja.com/Content/src/cards.png" alt="">
     </div>
-
+    
+    <!-- Info--------------------------------- -->
     <div class="enjoy_activities">
         <h2>
             Dolphin Cove Jamaica is the place to spend the day enjoying lots of fun activities here there is something for everyone.
             The entrance fee includes full use of the following activities:
         </h2>
-            <br><br>
+        <br><br>
         <div class="activities_wrap">
             <p>Swimming with sharks and stingrays</p>
             <p>Pet the camels</p>
@@ -202,10 +218,11 @@
             <p>Relax on our glistening white sandy beaches</p>
             <p>Interact with exotic birds, snakes and iguanas on the Jungle Trail walk</p>
         </div>
-            <br><br>
+        <br><br>
         <h2><i>Activities vary according to each park</i></h2>
     </div>
-
+    
+    <!-- Footer--------------------------------- -->
     <div class="footer_container">
         <footer>
             <div class="fleft">
@@ -247,7 +264,7 @@
             </div>
             <a href="/">www.dolphincoveja.com</a>
             <div class="admin_tour">
-                <a href="/admin_login">ad</a>
+                <a href="/admin_login">ad</a> 
             </div>
         </div.>
     </div>
